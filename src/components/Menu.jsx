@@ -40,7 +40,7 @@ function Menu({ children }) {
       <Divider />
       <List>
         {["Home", "Add Budget", "Profile"].map((text, index) => (
-          <ListItem>
+          <ListItem button key={text}>
             <ListItemIcon>{getIcon(index)}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
