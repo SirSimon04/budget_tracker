@@ -13,6 +13,12 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Toolbar } from "@mui/material";
 import { IconButton } from "@mui/material";
 import { Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+
 function AddButton() {
   const [open, setOpen] = useState(false);
 
@@ -22,6 +28,12 @@ function AddButton() {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const [category, setCategory] = useState("");
+
+  const changeCategory = event => {
+    setCategory(event.target.value);
+  };
 
   return (
     <div>
@@ -74,6 +86,20 @@ function AddButton() {
                 margin="normal"
                 fullWidth
               />
+            </Grid>
+            <Grid item xs={12}>
+              <FormControl required fullWidth sx={{ mt: 2 }}>
+                <InputLabel>Category</InputLabel>
+                <Select
+                  value={category}
+                  onChange={changeCategory}
+                  label="Category"
+                >
+                  <MenuItem value={"Food"}>Food</MenuItem>
+                  <MenuItem value={"Clothing"}>Clothing</MenuItem>
+                  <MenuItem value={"Entertainment"}>Entertainment</MenuItem>
+                </Select>
+              </FormControl>
             </Grid>
           </Grid>
         </DialogContent>
