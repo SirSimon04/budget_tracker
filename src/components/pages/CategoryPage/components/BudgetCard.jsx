@@ -28,7 +28,10 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   }
 }));
 
-function BudgetCard() {
+function BudgetCard({ category, current, max }) {
+  const MIN = 0;
+  const normalise = value => (value - MIN) * 100 / (max - MIN);
+
   return (
     <div>
       <Box sx={{ minWidth: 275 }}>
@@ -41,18 +44,18 @@ function BudgetCard() {
               alignItems="center"
             >
               <Grid item>
-                <Typography variant="h5">Entertainment</Typography>
+                <Typography variant="h5">{category}</Typography>
               </Grid>
               <Grid item>
                 <Typography variant="h5" color="text.secondary" fontSize={20}>
-                  {currencyFormatter.format(100)} /{" "}
-                  {currencyFormatter.format(120)}
+                  {currencyFormatter.format(current)} /{" "}
+                  {currencyFormatter.format(max)}
                 </Typography>
               </Grid>
             </Grid>
             <BorderLinearProgress
               variant="determinate"
-              value={70}
+              value={normalise(current)}
               sx={{ mt: 2 }}
             />
           </CardContent>
