@@ -11,13 +11,13 @@ const drawer = (
       <Toolbar />
       <Divider />
       <List>
-        <MenuButton text="Home">
+        <MenuButton text="Home" to="/">
           <HomeIcon />
         </MenuButton>
-        <MenuButton text="Categories">
+        <MenuButton text="Categories" to="/categories">
             <PaidIcon />
         </MenuButton>
-        <MenuButton text="Profile">
+        <MenuButton text="Profile" to="/profile">
             <AccountCircleIcon />
         </MenuButton>
       </List>
