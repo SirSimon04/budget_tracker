@@ -7,7 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import drawer from "./drawer";
+import CustomDrawer from "./drawer";
 import { Outlet } from "react-router-dom";
 
 const drawerWidth = 240;
@@ -65,7 +65,7 @@ function Menu({ children }) {
             }
           }}
         >
-          {drawer}
+          <CustomDrawer onClick={handleDrawerToggle} />
         </Drawer>
         <Drawer
           variant="permanent"
@@ -78,7 +78,7 @@ function Menu({ children }) {
           }}
           open
         >
-          {drawer}
+          <CustomDrawer />
         </Drawer>
       </Box>
       <Box
