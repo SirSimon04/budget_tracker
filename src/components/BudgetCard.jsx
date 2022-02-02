@@ -13,6 +13,7 @@ import LinearProgress, {
 } from "@mui/material/LinearProgress";
 import { styled } from "@mui/material/styles";
 import { currencyFormatter } from "../utils";
+import AddButton from "./AddButton";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
@@ -43,7 +44,7 @@ function BudgetCard() {
                 <Typography variant="h5">Entertainment</Typography>
               </Grid>
               <Grid item>
-                <Typography variant="h5" color="text.secondary">
+                <Typography variant="h5" color="text.secondary" fontSize={20}>
                   {currencyFormatter.format(100)} /{" "}
                   {currencyFormatter.format(120)}
                 </Typography>
@@ -56,14 +57,7 @@ function BudgetCard() {
             />
           </CardContent>
           <CardActions>
-            <Button
-              variant="contained"
-              sx={{
-                marginLeft: "auto"
-              }}
-            >
-              Add Expense
-            </Button>
+            <AddButton />
             <Button
               variant="outlined"
               sx={{

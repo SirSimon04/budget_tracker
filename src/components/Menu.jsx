@@ -72,7 +72,7 @@ function Menu({ children }) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Responsive Drawer
+            Budget Tracking App
           </Typography>
         </Toolbar>
       </AppBar>
