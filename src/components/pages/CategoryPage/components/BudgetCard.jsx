@@ -12,7 +12,7 @@ import LinearProgress, {
   linearProgressClasses
 } from "@mui/material/LinearProgress";
 import { styled } from "@mui/material/styles";
-import { currencyFormatter } from "../utils";
+import { currencyFormatter } from "../../../../utils";
 import AddButton from "./AddButton";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
