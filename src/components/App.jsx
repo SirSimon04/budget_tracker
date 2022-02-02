@@ -17,13 +17,13 @@ function App() {
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
-        <Menu>
-          <Routes>
+        <Routes>
+          <Route path="/" element={<Menu />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/categories" element={<CategoryPage />} />
             <Route path="/profile" element={<ProfilePage />} />
-          </Routes>
-        </Menu>
+          </Route>
+        </Routes>
       </ThemeProvider>
     </div>
   );
