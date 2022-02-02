@@ -6,6 +6,7 @@ import CategoryPage from "./pages/CategoryPage/CategoryPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
+import ExpensePage from "./pages/ExpensePage/ExpensePage";
 
 const darkTheme = createTheme({
   palette: {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Menu />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/categories" element={<CategoryPage />} />
+            <Route path="/expenses" element={<ExpensePage />} />
             <Route path="/profile" element={<ProfilePage />} />
           </Route>
         </Routes>

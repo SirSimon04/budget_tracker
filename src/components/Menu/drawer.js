@@ -5,6 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import HomeIcon from "@mui/icons-material/Home";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import PaidIcon from "@mui/icons-material/Paid";
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 const drawer = (
     <div>
@@ -16,6 +17,9 @@ const drawer = (
         </MenuButton>
         <MenuButton text="Categories" to="/categories">
             <PaidIcon />
+        </MenuButton>
+        <MenuButton text="Expenses" to="/expenses">
+            <AttachMoneyIcon />
         </MenuButton>
         <MenuButton text="Profile" to="/profile">
             <AccountCircleIcon />
