@@ -6,6 +6,8 @@ import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import { currencyFormatter } from "../../../utils";
 import BudgetCardContent from "./components/cardContents/BudgetCardContent";
 import ExpenseCardContent from "./components/cardContents/ExpenseCardContent";
+import IncomeCardContent from "./components/cardContents/IncomeCardContent";
+
 function HomePage() {
   return (
     <div>
@@ -28,6 +30,11 @@ function HomePage() {
             iconBg="primary.main"
           >
             <ExpenseCardContent />
+          </HomePageCard>
+        </Grid>
+        <Grid item xl={3} lg={3} sm={6} xs={12}>
+          <HomePageCard name="income" title="1200">
+            <IncomeCardContent />
           </HomePageCard>
         </Grid>
       </Grid>
