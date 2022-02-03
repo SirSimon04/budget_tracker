@@ -1,11 +1,4 @@
-import {
-  Avatar,
-  Box,
-  Card,
-  CardContent,
-  Grid,
-  Typography
-} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
 function BudgetCardContent() {
