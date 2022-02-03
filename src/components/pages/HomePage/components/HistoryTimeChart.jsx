@@ -14,6 +14,13 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 function HistoryTimeChart() {
   const theme = useTheme();
 
+  function getData() {
+    return Array.from(
+      { length: 40 },
+      () => Math.floor(Math.random() * 100) + 50
+    );
+  }
+
   const data = {
     datasets: [
       {
@@ -22,8 +29,8 @@ function HistoryTimeChart() {
         barThickness: 12,
         borderRadius: 4,
         categoryPercentage: 0.5,
-        data: [18, 5, 19, 27, 29, 19, 20],
-        label: "This year",
+        data: getData(),
+        label: "Last year",
         maxBarThickness: 10
       },
       {
@@ -32,12 +39,25 @@ function HistoryTimeChart() {
         barThickness: 12,
         borderRadius: 4,
         categoryPercentage: 0.5,
-        data: [11, 20, 12, 29, 30, 25, 13],
-        label: "Last year",
+        data: getData(),
+        label: "This year",
         maxBarThickness: 10
       }
     ],
-    labels: ["1 Aug", "2 Aug", "3 Aug", "4 Aug", "5 Aug", "6 Aug", "7 aug"]
+    labels: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "June",
+      "July",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ]
   };
 
   const options = {
@@ -92,7 +112,7 @@ function HistoryTimeChart() {
   return (
     <div>
       <Card>
-        <CardHeader title="Latest Sales" />
+        <CardHeader title="Savings" />
         <Divider />
         <CardContent>
           <Box
