@@ -13,7 +13,7 @@ import LocalDiningIcon from "@mui/icons-material/LocalDining";
 import MovieIcon from "@mui/icons-material/Movie";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 
-function CategoryChart() {
+function CategoryChart(props) {
   const theme = useTheme();
 
   const data = {
@@ -74,48 +74,46 @@ function CategoryChart() {
   ];
 
   return (
-    <div>
-      <Card>
-        <CardHeader title="Traffic by Device" />
-        <Divider />
-        <CardContent>
-          <Box
-            sx={{
-              height: 300,
-              position: "relative"
-            }}
-          >
-            <Doughnut data={data} options={options} />
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              pt: 2
-            }}
-          >
-            {devices.map(({ color, icon: Icon, title, value }) => (
-              <Box
-                key={title}
-                sx={{
-                  p: 1,
-                  textAlign: "center"
-                }}
-              >
-                <Icon color="action" />
-                <Typography color="textPrimary" variant="body1">
-                  {title}
-                </Typography>
-                <Typography style={{ color }} variant="h4">
-                  {value}
-                  %
-                </Typography>
-              </Box>
-            ))}
-          </Box>
-        </CardContent>
-      </Card>
-    </div>
+    <Card {...props}>
+      <CardHeader title="Traffic by Device" />
+      <Divider />
+      <CardContent>
+        <Box
+          sx={{
+            height: 300,
+            position: "relative"
+          }}
+        >
+          <Doughnut data={data} options={options} />
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            pt: 2
+          }}
+        >
+          {devices.map(({ color, icon: Icon, title, value }) => (
+            <Box
+              key={title}
+              sx={{
+                p: 1,
+                textAlign: "center"
+              }}
+            >
+              <Icon color="action" />
+              <Typography color="textPrimary" variant="body1">
+                {title}
+              </Typography>
+              <Typography style={{ color }} variant="h4">
+                {value}
+                %
+              </Typography>
+            </Box>
+          ))}
+        </Box>
+      </CardContent>
+    </Card>
   );
 }
 

@@ -10,6 +10,7 @@ import ExpenseCardContent from "./components/cardContents/ExpenseCardContent";
 import IncomeCardContent from "./components/cardContents/IncomeCardContent";
 import SavingsCardContent from "./components/cardContents/SavingsCardContent";
 import CategoryChart from "./components/CategoryChart";
+import HistoryTimeChart from "./components/HistoryTimeChart";
 
 function HomePage() {
   return (
@@ -55,8 +56,11 @@ function HomePage() {
             <SavingsCardContent />
           </HomePageCard>
         </Grid>
+        <Grid item lg={8} md={12} xl={9} xs={12}>
+          <HistoryTimeChart />
+        </Grid>
         <Grid item lg={4} md={6} xl={3} xs={12}>
-          <CategoryChart />
+          <CategoryChart sx={{ height: "100%" }} />
         </Grid>
       </Grid>
     </div>
