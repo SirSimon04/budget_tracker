@@ -9,6 +9,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import CustomDrawer from "./drawer";
 import { Outlet } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 const drawerWidth = 240;
 
