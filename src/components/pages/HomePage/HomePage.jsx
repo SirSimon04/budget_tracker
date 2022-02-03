@@ -9,6 +9,7 @@ import BudgetCardContent from "./components/cardContents/BudgetCardContent";
 import ExpenseCardContent from "./components/cardContents/ExpenseCardContent";
 import IncomeCardContent from "./components/cardContents/IncomeCardContent";
 import SavingsCardContent from "./components/cardContents/SavingsCardContent";
+import CategoryChart from "./components/CategoryChart";
 
 function HomePage() {
   return (
@@ -53,7 +54,10 @@ function HomePage() {
           >
             <SavingsCardContent />
           </HomePageCard>
-        </Grid>;
+        </Grid>
+        <Grid item lg={4} md={6} xl={3} xs={12}>
+          <CategoryChart />
+        </Grid>
       </Grid>
     </div>
   );
