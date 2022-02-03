@@ -9,9 +9,9 @@ import {
   Typography,
   useTheme
 } from "@mui/material";
-import LaptopMacIcon from "@mui/icons-material/LaptopMac";
-import PhoneIcon from "@mui/icons-material/Phone";
-import TabletIcon from "@mui/icons-material/Tablet";
+import LocalDiningIcon from "@mui/icons-material/LocalDining";
+import MovieIcon from "@mui/icons-material/Movie";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 
 function CategoryChart() {
   const theme = useTheme();
@@ -56,19 +56,19 @@ function CategoryChart() {
     {
       title: "Food",
       value: 63,
-      icon: LaptopMacIcon,
+      icon: LocalDiningIcon,
       color: "#89CFF0"
     },
     {
       title: "Clothing",
       value: 15,
-      icon: TabletIcon,
+      icon: ShoppingBasketIcon,
       color: "#E53935"
     },
     {
       title: "Entertainment",
       value: 23,
-      icon: PhoneIcon,
+      icon: MovieIcon,
       color: "#FB8C00"
     }
   ];
