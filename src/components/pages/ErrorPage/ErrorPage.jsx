@@ -24,7 +24,7 @@ function ErrorPage() {
               flexDirection: "column"
             }}
           >
-            <Typography variant="h3" color="textPrimary" align="center">
+            <Typography variant="h4" color="textPrimary" align="center">
               The page you are looking for does not exist!
             </Typography>
             {/* <Typography variant="subtitle2" color="textPrimary" sx={{ mt: 8 }}>

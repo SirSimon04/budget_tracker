@@ -3,7 +3,7 @@ import Menu from "./Menu/Menu";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/material";
 import CategoryPage from "./pages/CategoryPage/CategoryPage";
-import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import DebtPage from "./pages/DebtPage/DebtPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import ExpensePage from "./pages/ExpensePage/ExpensePage";
@@ -24,7 +24,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/categories" element={<CategoryPage />} />
             <Route path="/expenses" element={<ExpensePage />} />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/debts" element={<DebtPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Route>
         </Routes>

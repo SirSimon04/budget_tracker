@@ -22,7 +22,7 @@ function CustomDrawer({ onClick }) {
         <MenuButton text="Expenses" to="/expenses" onClick={onClick}>
           <AttachMoneyIcon />
         </MenuButton>
-        <MenuButton text="Profile" to="/profile" onClick={onClick}>
+        <MenuButton text="Debts" to="/debts" onClick={onClick}>
           <AccountCircleIcon />
         </MenuButton>
       </List>
