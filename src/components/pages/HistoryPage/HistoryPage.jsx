@@ -7,10 +7,10 @@ function HistoryPage() {
   return (
     <div>
       <Grid container spacing={3}>
-        <Grid xs={6} item>
+        <Grid xs={12} sm={6} item>
           <IncomeTimelineView />
         </Grid>
-        <Grid xs={6} item>
+        <Grid xs={12} sm={6} item>
           <ExpenseTimelineView />
         </Grid>
       </Grid>

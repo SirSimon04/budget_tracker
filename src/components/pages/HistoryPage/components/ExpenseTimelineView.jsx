@@ -6,7 +6,8 @@ import {
   CardHeader,
   Divider,
   useTheme,
-  Typography
+  Typography,
+  Tooltip
 } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
@@ -32,16 +33,42 @@ function ExpenseTimeLineView() {
         <CardContent>
           <Timeline>
             {[
-              { date: "1/11/2021", icon: <LocalDiningIcon />, amount: "40" },
-              { date: "2/23/2021", icon: <MovieIcon />, amount: "15" },
+              {
+                date: "1/11/2021",
+                icon: <LocalDiningIcon />,
+                amount: "40",
+                des: "Party with friends"
+              },
+              {
+                date: "2/23/2021",
+                icon: <MovieIcon />,
+                amount: "15",
+                des: "Cinema"
+              },
               {
                 date: "3/31/2021",
                 icon: <ShoppingBasketIcon />,
-                amount: "100"
+                amount: "100",
+                des: "New Hoodie"
               },
-              { date: "4/21/2021", icon: <LocalDiningIcon />, amount: "100" },
-              { date: "5/12/2021", icon: <MovieIcon />, amount: "50" },
-              { date: "6/21/2021", icon: <LocalDiningIcon />, amount: "7" }
+              {
+                date: "4/21/2021",
+                icon: <LocalDiningIcon />,
+                amount: "100",
+                des: "Diner with family"
+              },
+              {
+                date: "5/12/2021",
+                icon: <MovieIcon />,
+                amount: "50",
+                des: "Cinema with restaurant"
+              },
+              {
+                date: "6/21/2021",
+                icon: <LocalDiningIcon />,
+                amount: "7",
+                des: "Kebab"
+              }
             ].map((data, index) => (
               <TimelineItem>
                 <TimelineOppositeContent
@@ -51,7 +78,10 @@ function ExpenseTimeLineView() {
                   {data.date}
                 </TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="error">{data.icon}</TimelineDot>
+                  <Tooltip title={data.des} arrow>
+                    <TimelineDot color="error">{data.icon}</TimelineDot>
+                  </Tooltip>
+
                   {index !== 5 ? <TimelineConnector /> : null}
                 </TimelineSeparator>
                 <TimelineContent sx={{ pt: 2.5 }}>

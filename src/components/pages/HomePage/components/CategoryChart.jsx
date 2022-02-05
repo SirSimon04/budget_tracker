@@ -75,7 +75,7 @@ function CategoryChart(props) {
 
   return (
     <Card {...props}>
-      <CardHeader title="Traffic by Device" />
+      <CardHeader title="Expenses by category" />
       <Divider />
       <CardContent>
         <Box

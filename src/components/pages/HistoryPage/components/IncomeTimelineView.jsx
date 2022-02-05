@@ -6,7 +6,8 @@ import {
   CardHeader,
   Divider,
   useTheme,
-  Typography
+  Typography,
+  Tooltip
 } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
@@ -49,9 +50,12 @@ function IncomeTimelineView() {
                   {date}
                 </TimelineOppositeContent>
                 <TimelineSeparator>
-                  <TimelineDot color="success">
-                    <WorkIcon />
-                  </TimelineDot>
+                  <Tooltip title="Paycheck" arrow>
+                    <TimelineDot color="success">
+                      <WorkIcon />
+                    </TimelineDot>
+                  </Tooltip>
+
                   {index !== 7 ? <TimelineConnector /> : null}
                 </TimelineSeparator>
                 <TimelineContent sx={{ pt: 2.5 }}>
