@@ -35,7 +35,7 @@ function BudgetCard({ category, current, max }) {
   return (
     <div>
       <Box sx={{ minWidth: 275 }}>
-        <Card variant="outlined">
+        <Card>
           <CardContent>
             <Grid
               container
