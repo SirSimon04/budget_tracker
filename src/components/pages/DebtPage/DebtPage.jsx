@@ -5,6 +5,7 @@ import { currencyFormatter } from "../../../utils";
 import LentCardContent from "./components/cardContents/LentCardContent";
 import BorrowedCardContent from "./components/cardContents/BorrowedCardContent";
 import CreditScoreIcon from "@mui/icons-material/CreditScore";
+import DebtTable from "./components/DebtTable";
 
 function DebtPage() {
   return (
@@ -29,6 +30,11 @@ function DebtPage() {
           >
             <BorrowedCardContent />
           </DebtCard>
+        </Grid>
+      </Grid>
+      <Grid container sx={{ mt: 5 }}>
+        <Grid item xs={12}>
+          <DebtTable />
         </Grid>
       </Grid>
     </div>

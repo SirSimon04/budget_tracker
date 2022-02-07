@@ -67,23 +67,14 @@ const rows = [
 
 function DebtTable() {
   return (
-    <div style={{ width: "100%" }}>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Grid item xs={12} lg={8} xl={5}>
-          <DataGrid
-            autoHeight={true}
-            rows={rows}
-            columns={columns}
-            pageSize={5}
-            rowsPerPageOptions={[5]}
-          />
-        </Grid>
-      </Grid>
+    <div>
+      <DataGrid
+        autoHeight={true}
+        rows={rows}
+        columns={columns}
+        pageSize={5}
+        rowsPerPageOptions={[5]}
+      />
     </div>
   );
 }
