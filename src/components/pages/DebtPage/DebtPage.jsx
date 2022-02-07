@@ -10,7 +10,7 @@ import DebtTable from "./components/DebtTable";
 function DebtPage() {
   return (
     <div>
-      <Grid container spacing={3}>
+      {/* <Grid container spacing={3}>
         <Grid item xl={3} lg={3} sm={6} xs={12}>
           <DebtCard
             name="Lent"
@@ -31,12 +31,10 @@ function DebtPage() {
             <BorrowedCardContent />
           </DebtCard>
         </Grid>
-      </Grid>
-      <Grid container sx={{ mt: 5 }}>
-        <Grid item xs={12}>
-          <DebtTable />
-        </Grid>
-      </Grid>
+        <Grid item xs={12}> */}
+      <DebtTable />
+      {/* </Grid>
+      </Grid> */}
     </div>
   );
 }
